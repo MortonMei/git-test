@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="uff-8>">
+        <title>Vue入门</title>
+        <script src="./vue.js"></script>
+    </head>
+    <body>
+        <!-- 挂载点，模板，实例之间的关系 -->
+        <div id="root">
+            <div @click="handleClick">
+                {{massage}}
+            </div>
+            </div>
+
+        <script>
+            // Vue实例
+            new Vue({
+                // el是挂载点
+                el:"#root",
+                data:{
+                    massage:"hello world",
+                    number:123
+                },
+                methods:{
+                    handleClick:function(){
+                        this.massage = "world"
+                    }
+                }
+            })
+        </script>
+    </body>
+</html>
